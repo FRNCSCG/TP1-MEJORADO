@@ -13,21 +13,19 @@ namespace TP1_simulacion
 {
     public partial class Punto2 : Form
     {
+        public Punto2()
+        {
+            InitializeComponent();
+        }
 
         public VentanaPrincipal ventana { get; set; }
 
-        public Punto2(VentanaPrincipal ven)
-        {
-            InitializeComponent();
-            ventana = ven;
-            
-        }
 
-        public Punto2()
-        {
-        }
 
-        private void btonGenerar_Click_1(object sender, EventArgs e)
+
+
+
+        private void btonGenerar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -43,7 +41,7 @@ namespace TP1_simulacion
                     {
                         double numero = 0;
                         numero = rnd.NextDouble();
-                        lstNumeros.Items.Add(numero);
+                        lstNumeros.Items.Add(Math.Round(numero, 4));
 
                     }
 
@@ -74,7 +72,7 @@ namespace TP1_simulacion
                                 }
 
                             }
-                            celdaIntervalo.Value = valorMin + "-" + valorMax;
+                            celdaIntervalo.Value = Math.Round(valorMin,4) + "-" + Math.Round(valorMax,4);
                             fila.Cells.Add(celdaIntervalo);
 
 
@@ -90,7 +88,7 @@ namespace TP1_simulacion
                                     contador = contador + 1;
                                 }
                             }
-                            celdaIntervalo.Value = valorMin + "-" + valorMax;
+                            celdaIntervalo.Value = Math.Round(valorMin,4) + "-" + Math.Round(valorMax,4);
                             fila.Cells.Add(celdaIntervalo);
                         }
 
@@ -103,7 +101,7 @@ namespace TP1_simulacion
 
                         // celda Fe
                         DataGridViewTextBoxCell celdaFe = new DataGridViewTextBoxCell();
-                        celdaFe.Value = Convert.ToDecimal(TxtTamañoMuestra.Text) / Convert.ToDecimal(TxtCantidadIntervalos.Text);
+                        celdaFe.Value = Math.Round(Convert.ToDecimal(TxtTamañoMuestra.Text) / Convert.ToDecimal(TxtCantidadIntervalos.Text),4);
                         fila.Cells.Add(celdaFe);
 
                         DataGridViewTextBoxCell celdaC = new DataGridViewTextBoxCell();
@@ -111,7 +109,7 @@ namespace TP1_simulacion
                         double Fo = Convert.ToDouble(contador);
                         double resta = Fo - Fe;
                         double c = Math.Pow(resta, 2) / Fe;
-                        celdaC.Value = c;
+                        celdaC.Value = Math.Round(c,4);
                         fila.Cells.Add(celdaC);
 
                         DataGridViewTextBoxCell celdaCacum = new DataGridViewTextBoxCell();
@@ -123,7 +121,7 @@ namespace TP1_simulacion
                         {
                             acumulador = acumulador + c;
                         }
-                        celdaCacum.Value = acumulador;
+                        celdaCacum.Value = Math.Round(acumulador,4);
                         fila.Cells.Add(celdaCacum);
 
                         //AgregarFila
@@ -137,28 +135,22 @@ namespace TP1_simulacion
                     }
                 }
             }
+
             catch (Exception)
             {
                 MessageBox.Show("debe limpiar los campos");
             }
-
-            
-
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            ventana.Show();
-            this.Close();    
+
+            this.Controls.Clear();
+            InitializeComponent();
+
+
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Punto2 ven = new Punto2(ventana);
-            ven.Show();
-            this.Close();
-        }
     }
 }

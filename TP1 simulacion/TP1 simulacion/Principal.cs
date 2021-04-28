@@ -34,7 +34,7 @@ namespace TP1_simulacion
         private void button2_Click(object sender, EventArgs e)
         {
             clearPanel();
-            Punto22 pantActual = new Punto22() { TopLevel = false, TopMost = true };
+            Punto2 pantActual = new Punto2() { TopLevel = false, TopMost = true };
             pantActual.FormBorderStyle = FormBorderStyle.None;
             this.panelContainer.Controls.Add(pantActual);
             pantActual.Show();

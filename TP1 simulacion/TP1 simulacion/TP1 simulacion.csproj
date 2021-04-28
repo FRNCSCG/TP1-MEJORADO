@@ -61,12 +61,6 @@
     <Compile Include="Punto2.Designer.cs">
       <DependentUpon>Punto2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Punto22.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Punto22.Designer.cs">
-      <DependentUpon>Punto22.cs</DependentUpon>
-    </Compile>
     <Compile Include="Punto3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,9 +88,6 @@
     </Compile>
     <EmbeddedResource Include="Punto2.resx">
       <DependentUpon>Punto2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Punto22.resx">
-      <DependentUpon>Punto22.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Punto3.resx">
       <DependentUpon>Punto3.cs</DependentUpon>

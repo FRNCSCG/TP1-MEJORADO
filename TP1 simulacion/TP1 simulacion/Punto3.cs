@@ -28,8 +28,8 @@ namespace TP1_simulacion
 
             double acumulador = 0;
             int Xo = Convert.ToInt32( txtXo.Text);
-            double g = Convert.ToDouble(txtg.Text);
-            Double k = Convert.ToDouble(txtK.Text);
+            double g = 0;
+            double k = 0;
             int Ce= Convert.ToInt32(txtC.Text);
             double a = 0;
             double m = 0;
@@ -37,8 +37,9 @@ namespace TP1_simulacion
 
             if (txtM.Text.Equals(""))
             {
+                g = Convert.ToDouble(txtg.Text);
                 m = Math.Pow(2.0,g);
-                MessageBox.Show("anda"+ m);
+                txtM.Text = m.ToString();
             }
             else
             {
@@ -47,12 +48,37 @@ namespace TP1_simulacion
 
             if (txtA.Text.Equals(""))
             {
+                k = Convert.ToDouble(txtK.Text);
                 a = 1 + 4 * k;
+                txtA.Text = a.ToString();
             }
             else
             {
                 a = Convert.ToInt32(txtA.Text);
             }
+
+            if (txtg.Text.Equals(""))
+            {
+                g = Math.Log(m) / Math.Log(2);
+                txtg.Text = g.ToString();
+            }
+            else
+            {
+                g = Convert.ToDouble(txtg.Text);
+            }
+
+
+            if (txtK.Text.Equals(""))
+            {
+                k = (a - 1) / 4;
+                txtK.Text = k.ToString();
+            }
+            else
+            {
+                k = Convert.ToDouble(txtK.Text);
+            }
+
+
 
             // Random con metodo congruencial
             double Colum = 0;
