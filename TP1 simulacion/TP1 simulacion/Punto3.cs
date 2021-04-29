@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MathNet.Numerics.Distributions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -178,6 +179,19 @@ namespace TP1_simulacion
                 grillaDatos.Rows.Add(fila);
             }
 
+            lblChi.Text = Convert.ToString(Math.Round(getChiMaximo(Convert.ToInt32(TxtCantidadIntervalos.Text), 0.05), 4));
+
+            if (acumulador < Convert.ToDouble(lblChi.Text))
+            {
+                lblConclusion.Text = "No se rechaza la hipotesis planteada.";
+                lblConclusion.BackColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblConclusion.Text = "Se rechaza la hipotesis planteada.";
+                lblConclusion.BackColor = System.Drawing.Color.Red;
+            }
+
 
         }
 
@@ -194,6 +208,11 @@ namespace TP1_simulacion
         {
             this.Controls.Clear();
             InitializeComponent();
+        }
+
+        public double getChiMaximo(int cantidadIntervalos, double alfa)
+        {
+            return (ChiSquared.InvCDF(cantidadIntervalos - 1, 1 - alfa));
         }
     }
 }

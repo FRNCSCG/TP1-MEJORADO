@@ -29,10 +29,10 @@ namespace TP1_simulacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.chr = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button2 = new System.Windows.Forms.Button();
             this.grillaDatos = new System.Windows.Forms.DataGridView();
@@ -47,6 +47,9 @@ namespace TP1_simulacion
             this.TxtTamañoMuestra = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblChi = new System.Windows.Forms.Label();
+            this.lblConclusion = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaDatos)).BeginInit();
             this.SuspendLayout();
@@ -57,16 +60,16 @@ namespace TP1_simulacion
             this.chr.BackImageTransparentColor = System.Drawing.Color.White;
             this.chr.BackSecondaryColor = System.Drawing.Color.White;
             this.chr.BorderSkin.BackColor = System.Drawing.Color.White;
-            chartArea1.Name = "ChartArea1";
-            this.chr.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chr.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chr.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chr.Legends.Add(legend3);
             this.chr.Location = new System.Drawing.Point(508, 18);
             this.chr.Name = "chr";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chr.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chr.Series.Add(series3);
             this.chr.Size = new System.Drawing.Size(403, 506);
             this.chr.TabIndex = 16;
             this.chr.Text = "chart1";
@@ -92,14 +95,14 @@ namespace TP1_simulacion
             this.grillaDatos.AllowUserToDeleteRows = false;
             this.grillaDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(35)))), ((int)(((byte)(51)))));
             this.grillaDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grillaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Intervalo,
@@ -211,13 +214,43 @@ namespace TP1_simulacion
             this.label1.TabIndex = 18;
             this.label1.Text = "Tamaño de muestra";
             // 
-            // Punto22
+            // lblChi
+            // 
+            this.lblChi.AutoSize = true;
+            this.lblChi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblChi.Location = new System.Drawing.Point(442, 536);
+            this.lblChi.Name = "lblChi";
+            this.lblChi.Size = new System.Drawing.Size(0, 13);
+            this.lblChi.TabIndex = 26;
+            // 
+            // lblConclusion
+            // 
+            this.lblConclusion.AutoSize = true;
+            this.lblConclusion.Location = new System.Drawing.Point(505, 536);
+            this.lblConclusion.Name = "lblConclusion";
+            this.lblConclusion.Size = new System.Drawing.Size(0, 13);
+            this.lblConclusion.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(338, 536);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Chi Tabulado";
+            // 
+            // Punto2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(30)))), ((int)(((byte)(51)))));
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(923, 540);
+            this.ClientSize = new System.Drawing.Size(923, 598);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblConclusion);
+            this.Controls.Add(this.lblChi);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.grillaDatos);
             this.Controls.Add(this.lstNumeros);
@@ -229,8 +262,9 @@ namespace TP1_simulacion
             this.Controls.Add(this.chr);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Punto22";
+            this.Name = "Punto2";
             this.Text = "Punto22";
+            this.Load += new System.EventHandler(this.Punto2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grillaDatos)).EndInit();
             this.ResumeLayout(false);
@@ -254,5 +288,8 @@ namespace TP1_simulacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Fe;
         private System.Windows.Forms.DataGridViewTextBoxColumn C;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cacu;
+        private System.Windows.Forms.Label lblChi;
+        private System.Windows.Forms.Label lblConclusion;
+        private System.Windows.Forms.Label label3;
     }
 }

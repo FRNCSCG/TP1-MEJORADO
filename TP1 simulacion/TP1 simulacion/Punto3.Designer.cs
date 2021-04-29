@@ -29,7 +29,7 @@ namespace TP1_simulacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grillaDatos = new System.Windows.Forms.DataGridView();
             this.Intervalo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +55,9 @@ namespace TP1_simulacion
             this.txtXo = new System.Windows.Forms.TextBox();
             this.txtM = new System.Windows.Forms.TextBox();
             this.txtA = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblConclusion = new System.Windows.Forms.Label();
+            this.lblChi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,14 +68,14 @@ namespace TP1_simulacion
             this.grillaDatos.AllowUserToResizeRows = false;
             this.grillaDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(35)))), ((int)(((byte)(51)))));
             this.grillaDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grillaDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grillaDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grillaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grillaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Intervalo,
@@ -312,12 +315,42 @@ namespace TP1_simulacion
             this.txtA.Size = new System.Drawing.Size(38, 20);
             this.txtA.TabIndex = 31;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(684, 165);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Chi Tabulado";
+            // 
+            // lblConclusion
+            // 
+            this.lblConclusion.AutoSize = true;
+            this.lblConclusion.Location = new System.Drawing.Point(727, 141);
+            this.lblConclusion.Name = "lblConclusion";
+            this.lblConclusion.Size = new System.Drawing.Size(0, 13);
+            this.lblConclusion.TabIndex = 37;
+            // 
+            // lblChi
+            // 
+            this.lblChi.AutoSize = true;
+            this.lblChi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblChi.Location = new System.Drawing.Point(788, 165);
+            this.lblChi.Name = "lblChi";
+            this.lblChi.Size = new System.Drawing.Size(0, 13);
+            this.lblChi.TabIndex = 36;
+            // 
             // Punto3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(30)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(970, 549);
+            this.ClientSize = new System.Drawing.Size(970, 573);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblConclusion);
+            this.Controls.Add(this.lblChi);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtM);
             this.Controls.Add(this.label8);
@@ -374,5 +407,8 @@ namespace TP1_simulacion
         private System.Windows.Forms.TextBox txtXo;
         private System.Windows.Forms.TextBox txtM;
         private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblConclusion;
+        private System.Windows.Forms.Label lblChi;
     }
 }
